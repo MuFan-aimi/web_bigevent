@@ -58,7 +58,7 @@ $(function () {
             data: $(this).serialize(),
             success: function (res) {
                 if (res.status !== 0) {
-                    return layer.msg('登录失败！')
+                    return layer.msg(res.message)
                 }
                 // console.log(res.token);
                 layer.msg('登录成功！')
